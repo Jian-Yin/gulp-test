@@ -1,0 +1,26 @@
+@charset "utf-8";
+@import "../../sprites/style/sprite.scss";
+.icon {
+    display: inline-block;
+    background-image: url(../src/sprites/sprite.png);
+}
+
+.icon-account {
+    @include sprite($account);
+}
+
+.icon-account-loged {
+    @include sprite($account-loged);
+}
+
+@media (max-width:1024px),
+screen and (-webkit-min-device-pixel-ratio:2),
+screen and (min--moz-device-pixel-ratio:2),
+screen and (-o-min-device-piratio:200/100),
+screen and (min-device-pixel-ratio:2) {
+    .icon{
+        background-image: url(../src/sprites/sprite@2x.png);
+        @include spritesheet-size();
+    }
+
+}
